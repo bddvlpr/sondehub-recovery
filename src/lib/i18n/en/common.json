@@ -2,5 +2,9 @@
   "actions": {
     "next": "Next",
     "back": "Back"
+  },
+  "labels": {
+    "location": "Location",
+    "format": "Format"
   }
 }

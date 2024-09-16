@@ -5,7 +5,17 @@
     "description": "Radiosondes are meteorological instruments used to sample the upper atmosphere, providing data that supports atmospheric weather models, and hence weather predictions. They are launched all around the world at regular (often 12 hourly) intervals, and land in all sorts of places!"
   },
   "type": {
-    "id": "Type"
+    "id": "Type",
+    "card": {
+      "rs41": {
+        "location": "Sticker at the base of the sonde (near the antenna) and printed on the sensor stalk.",
+        "format": "One letter, followed by 7 numbers (e.g. T1234567)."
+      },
+      "rs41-ng": {
+        "location": "Use the number on the sensor stalk, not the number on the sticker!",
+        "format": "One letter, followed by 7 numbers (e.g. T1234567)."
+      }
+    }
   },
   "serial": {
     "id": "Serial"

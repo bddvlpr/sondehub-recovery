@@ -1,6 +1,8 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
   import { type Context, RECOVERY_STEPS } from '$lib/steps';
+  import ChevronLeft from 'lucide-svelte/icons/chevron-left';
+  import ChevronRight from 'lucide-svelte/icons/chevron-right';
 
   let ctx: Context = $state({});
   let stepIndex = $state(0);
@@ -29,6 +31,7 @@
       disabled={stepIndex <= 0}
       onclick={() => stepIndex--}
     >
+      <ChevronLeft />
       {$t('common.actions.back')}
     </button>
     <button
@@ -37,6 +40,7 @@
       onclick={() => stepIndex++}
     >
       {$t('common.actions.next')}
+      <ChevronRight />
     </button>
   </div>
 </div>
