@@ -20,7 +20,7 @@
   ];
 </script>
 
-<div class="flex justify-center flex-wrap">
+<div class="flex flex-wrap justify-center">
   {#each types as { type }}
     <div>
       <button

@@ -1,0 +1,19 @@
+{
+  "intro": {
+    "id": "Intro",
+    "title": "You found a Radiosonde!",
+    "description": "Radiosondes are meteorological instruments used to sample the upper atmosphere, providing data that supports atmospheric weather models, and hence weather predictions. They are launched all around the world at regular (often 12 hourly) intervals, and land in all sorts of places!"
+  },
+  "type": {
+    "id": "Type"
+  },
+  "serial": {
+    "id": "Serial"
+  },
+  "location": {
+    "id": "Location"
+  },
+  "details": {
+    "id": "Details"
+  }
+}

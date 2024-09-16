@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { t } from '$lib/i18n';
   import { type Context, RECOVERY_STEPS } from '$lib/steps';
 
   let ctx: Context = $state({});
@@ -10,9 +11,9 @@
 <div class="m-5 rounded-lg bg-base-200 p-5">
   <div class="flex w-full justify-center">
     <ul class="steps">
-      {#each RECOVERY_STEPS as { title }, index}
+      {#each RECOVERY_STEPS as { key }, index}
         <li class="step step-primary" class:step-primary={stepIndex >= index}>
-          {title}
+          {$t(`steps.${key}.id`)}
         </li>
       {/each}
     </ul>
@@ -28,14 +29,14 @@
       disabled={stepIndex <= 0}
       onclick={() => stepIndex--}
     >
-      Back
+      {$t('common.actions.back')}
     </button>
     <button
       class="btn btn-primary"
       disabled={currentStep.locked?.(ctx)}
       onclick={() => stepIndex++}
     >
-      Next
+      {$t('common.actions.next')}
     </button>
   </div>
 </div>

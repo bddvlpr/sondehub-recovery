@@ -7,31 +7,31 @@ import SerialStep from './components/steps/serial.svelte';
 import TypeStep from './components/steps/type.svelte';
 
 export const RECOVERY_STEPS: {
-  title: string;
+  key: string;
   component: Component<{ ctx: Context }>;
   locked?: (ctx: Context) => boolean;
 }[] = [
   {
-    title: 'Intro',
+    key: 'intro',
     component: IntroStep
   },
   {
-    title: 'Type',
+    key: 'type',
     component: TypeStep,
     locked: ({ type }) => !type
   },
   {
-    title: 'Serial',
+    key: 'serial',
     component: SerialStep,
     locked: ({ serial }) => !serial
   },
   {
-    title: 'Location',
+    key: 'location',
     component: LocationStep,
     locked: ({ location }) => !location
   },
   {
-    title: 'Details',
+    key: 'details',
     component: DetailsStep
   }
 ];

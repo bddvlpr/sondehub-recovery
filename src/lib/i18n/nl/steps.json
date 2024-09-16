@@ -1,0 +1,19 @@
+{
+  "intro": {
+    "id": "Intro",
+    "title": "Je hebt een Radiosonde gevonden!",
+    "description": "Radiosondes zijn meteorologische instrumenten die worden gebruikt om de bovenste lagen van de atmosfeer te bemonsteren, waarbij ze gegevens leveren die de atmosferische weermodellen ondersteunen en daarmee weersvoorspellingen mogelijk maken. Ze worden wereldwijd op regelmatige (vaak 12-uurlijkse) intervallen gelanceerd en komen op allerlei verschillende plekken terecht!"
+  },
+  "type": {
+    "id": "Type"
+  },
+  "serial": {
+    "id": "Serial"
+  },
+  "location": {
+    "id": "Locatie"
+  },
+  "details": {
+    "id": "Details"
+  }
+}
