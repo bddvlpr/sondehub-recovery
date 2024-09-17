@@ -1,19 +1,19 @@
 <script lang="ts">
   import { t } from '$lib/i18n';
-  import { type Context, RECOVERY_STEPS } from '$lib/steps';
+  import { type Context, recoverySteps } from '$lib/steps';
   import ChevronLeft from 'lucide-svelte/icons/chevron-left';
   import ChevronRight from 'lucide-svelte/icons/chevron-right';
 
   let ctx: Context = $state({});
   let stepIndex = $state(0);
 
-  let currentStep = $derived(RECOVERY_STEPS[stepIndex]);
+  let currentStep = $derived(recoverySteps[stepIndex]);
 </script>
 
 <div class="m-5 rounded-lg bg-base-200 p-5">
   <div class="flex w-full justify-center">
     <ul class="steps">
-      {#each RECOVERY_STEPS as { key }, index}
+      {#each recoverySteps as { key }, index}
         <li class="step step-primary" class:step-primary={stepIndex >= index}>
           {$t(`steps.${key}.id`)}
         </li>
@@ -21,7 +21,7 @@
     </ul>
   </div>
 
-  <div class="my-2">
+  <div class="my-4">
     <currentStep.component bind:ctx />
   </div>
 

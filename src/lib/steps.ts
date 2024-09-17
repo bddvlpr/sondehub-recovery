@@ -5,8 +5,9 @@ import IntroStep from './components/steps/intro.svelte';
 import LocationStep from './components/steps/location.svelte';
 import SerialStep from './components/steps/serial.svelte';
 import TypeStep from './components/steps/type.svelte';
+import { type Sonde, validators } from './serial';
 
-export const RECOVERY_STEPS: {
+export const recoverySteps: {
   key: string;
   component: Component<{ ctx: Context }>;
   locked?: (ctx: Context) => boolean;
@@ -18,12 +19,12 @@ export const RECOVERY_STEPS: {
   {
     key: 'type',
     component: TypeStep,
-    locked: ({ type }) => !type
+    locked: ({ sonde }) => !sonde
   },
   {
     key: 'serial',
     component: SerialStep,
-    locked: ({ serial }) => !serial
+    locked: ({ serial, sonde }) => !serial || !validators[sonde!.type]?.test(serial)
   },
   {
     key: 'location',
@@ -37,7 +38,7 @@ export const RECOVERY_STEPS: {
 ];
 
 export type Context = {
-  type?: string;
+  sonde?: Sonde;
   serial?: string;
   location?: [number, number];
 };

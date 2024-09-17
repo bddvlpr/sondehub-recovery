@@ -1,3 +1,5 @@
 <script lang="ts">
-  const checks: Record<string, RegExp> = {};
+  import type { Context } from '$lib/steps';
+
+  const { ctx = $bindable() }: { ctx: Context } = $props();
 </script>

@@ -14,6 +14,42 @@
       "rs41-ng": {
         "location": "Use the number on the sensor stalk, not the number on the sticker!",
         "format": "One letter, followed by 7 numbers (e.g. T1234567)."
+      },
+      "rs92": {
+        "location": "Sticker at the base of the sonde (near the antenna) and printed on the sensor stalk.",
+        "format": "One letter, followed by 7 numbers (e.g. M1234567)."
+      },
+      "dfm-09": {
+        "location": "Sticker on the side of the sonde.",
+        "format": "Six digit number (e.g. 123456)."
+      },
+      "dfm-17": {
+        "location": "Sticker on the side of the sonde.",
+        "format": "Five digits, dash and six digits (e.g. 12345-123456)."
+      },
+      "m10": {
+        "location": "Sticker on the side of the sonde.",
+        "format": "Three digits, a single digit and five digits (e.g. 123 4 56789)."
+      },
+      "m20": {
+        "location": "Sticker on the side of the sonde.",
+        "format": "Three digits, a single digit and five digits (e.g. 123 4 56789)."
+      },
+      "imet-50": {
+        "location": "Sticker on the sensor boom.",
+        "format": "Eight digit number (e.g. 12345678)."
+      },
+      "imet-54": {
+        "location": "Sticker on the sensor boom.",
+        "format": "Eight digit number (e.g. 12345678)."
+      },
+      "ims-100": {
+        "location": "Sticker on the side of the sonde.",
+        "format": "Seven digit number (e.g. 1234567)."
+      },
+      "wxr-301": {
+        "location": "Sticker at the base of the sonde.",
+        "format": "Ten digit number (e.g. 1234567890)."
       }
     }
   },
