@@ -8,7 +8,7 @@
 
 {@render children?.()}
 
-<div class="flex justify-center">
+<div class="my-2 flex justify-center">
   <select class="select select-bordered select-sm" bind:value={$locale}>
     {#each $locales as lang}
       <option value={lang}>{$t(`languages.${lang}`)}</option>

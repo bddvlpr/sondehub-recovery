@@ -54,7 +54,9 @@
     }
   },
   "serial": {
-    "id": "Serial"
+    "id": "Serial",
+    "description": "Enter the serial number of the radiosonde below.",
+    "check": "Check"
   },
   "location": {
     "id": "Location"

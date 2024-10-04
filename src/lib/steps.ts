@@ -24,7 +24,8 @@ export const recoverySteps: {
   {
     key: 'serial',
     component: SerialStep,
-    locked: ({ serial, sonde }) => !serial || !validators[sonde!.type]?.test(serial)
+    locked: ({ serial, sonde, verified }) =>
+      !serial || !validators[sonde!.type]?.test(serial) || !verified
   },
   {
     key: 'location',
@@ -40,5 +41,6 @@ export const recoverySteps: {
 export type Context = {
   sonde?: Sonde;
   serial?: string;
+  verified?: boolean;
   location?: [number, number];
 };

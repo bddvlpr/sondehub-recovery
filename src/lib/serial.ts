@@ -5,27 +5,13 @@ export type SondeType =
   | 'DFM-17'
   | 'iMet-{50,54}'
   | 'iMS-100'
+  | 'LMS6'
   | 'M{10,20}'
   | 'WxR-301';
 
 export type Sonde = { id: string; type: SondeType; name: string };
 
 export const types: Sonde[] = [
-  {
-    id: 'rs41',
-    type: 'RS41-{SG,SGP,SGM,NG}',
-    name: 'RS41-SG/SGP/SGM'
-  },
-  {
-    id: 'rs41-ng',
-    type: 'RS41-{SG,SGP,SGM,NG}',
-    name: 'RS41-NG'
-  },
-  {
-    id: 'rs92',
-    type: 'RS92-SGP',
-    name: 'RS92-SGP'
-  },
   {
     id: 'dfm-09',
     type: 'DFM-09',
@@ -35,6 +21,26 @@ export const types: Sonde[] = [
     id: 'dfm-17',
     type: 'DFM-17',
     name: 'DFM-17'
+  },
+  {
+    id: 'imet-1',
+    type: 'iMet-{50,54}', // TODO: !!!
+    name: 'iMet-1'
+  },
+  {
+    id: 'imet-4',
+    type: 'iMet-{50,54}', // TODO: !!!
+    name: 'iMet-4'
+  },
+  {
+    id: 'imet-54',
+    type: 'iMet-{50,54}',
+    name: 'iMet-54'
+  },
+  {
+    id: 'lms6',
+    type: 'iMet-{50,54}', // TODO: !!!
+    name: 'LMS6'
   },
   {
     id: 'm10',
@@ -47,22 +53,22 @@ export const types: Sonde[] = [
     name: 'M20'
   },
   {
-    id: 'imet-50',
-    type: 'iMet-{50,54}',
-    name: 'iMet-50'
+    id: 'rs41-sge',
+    type: 'RS41-{SG,SGP,SGM,NG}',
+    name: 'RS41-SGE'
   },
   {
-    id: 'imet-54',
-    type: 'iMet-{50,54}',
-    name: 'iMet-54'
+    id: 'rs41-sg',
+    type: 'RS41-{SG,SGP,SGM,NG}',
+    name: 'RS41-SG'
   },
   {
-    id: 'ims-100',
-    type: 'iMS-100',
-    name: 'iMS-100'
+    id: 'rs92-sgp',
+    type: 'RS92-SGP',
+    name: 'RS92-SGP'
   },
   {
-    id: 'wxr-301',
+    id: 'wxr301',
     type: 'WxR-301',
     name: 'WxR-301'
   }
@@ -75,6 +81,7 @@ export const validators: { [type in SondeType]?: RegExp } = {
   'DFM-17': /^([0-9]{5}-[0-9]{6}|[0-9]{8})$/,
   'iMet-{50,54}': /^[0-9]{8}$/,
   'iMS-100': /^[0-9]{7}$/,
+  LMS6: /^[0-9]{7}$/,
   'M{10,20}': /^[0-9]{3}[- ]?[0-9][- ]?[0-9]{5}$|^[0-9]{8}$/,
   'WxR-301': /^[0-9]{10}$/
 };
